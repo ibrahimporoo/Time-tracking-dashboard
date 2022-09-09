@@ -22,7 +22,7 @@ function updateData(timeFrame) {
 	}).then(datajson => {
 		for(let i = 0; i < datajson.length; i++) {
 			allTimeTitles[i].innerText = timeFrame;
-			prevHours[i].innerText = datajson[i].timeframes[timeFrame].previous;
+			currentHours[i].innerText = datajson[i].timeframes[timeFrame].current;
 			prevHours[i].innerText = datajson[i].timeframes[timeFrame].previous;
 		}
 	})
